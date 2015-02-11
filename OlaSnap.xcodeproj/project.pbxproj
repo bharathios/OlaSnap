@@ -14,6 +14,7 @@
 		F61A953A1A8B19F2003225B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61A95391A8B19F2003225B9 /* Images.xcassets */; };
 		F61A953D1A8B19F2003225B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61A953B1A8B19F2003225B9 /* LaunchScreen.xib */; };
 		F61A95491A8B19F2003225B9 /* OlaSnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F61A95481A8B19F2003225B9 /* OlaSnapTests.m */; };
+		F61A95541A8B1E0B003225B9 /* olacab.png in Resources */ = {isa = PBXBuildFile; fileRef = F61A95531A8B1E0B003225B9 /* olacab.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		F61A95421A8B19F2003225B9 /* OlaSnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OlaSnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61A95471A8B19F2003225B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F61A95481A8B19F2003225B9 /* OlaSnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OlaSnapTests.m; sourceTree = "<group>"; };
+		F61A95531A8B1E0B003225B9 /* olacab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = olacab.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		F61A952C1A8B19F2003225B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F61A95521A8B1DF6003225B9 /* Images */,
 				F61A952D1A8B19F2003225B9 /* Info.plist */,
 				F61A952E1A8B19F2003225B9 /* main.m */,
 			);
@@ -117,6 +120,14 @@
 				F61A95471A8B19F2003225B9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F61A95521A8B1DF6003225B9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F61A95531A8B1E0B003225B9 /* olacab.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				F61A95381A8B19F2003225B9 /* Main.storyboard in Resources */,
 				F61A953D1A8B19F2003225B9 /* LaunchScreen.xib in Resources */,
 				F61A953A1A8B19F2003225B9 /* Images.xcassets in Resources */,
+				F61A95541A8B1E0B003225B9 /* olacab.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OlaSnap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OlaSnap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -1,25 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lNF-rx-2ud">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olacab.png" translatesAutoresizingMaskIntoConstraints="NO" id="FSx-dM-Taa">
+                                <rect key="frame" x="58" y="279" width="258" height="110"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7IB-yg-BI1" appends="YES" id="Yk7-PV-aiI"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play like a kid while you ride like a KING !" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSa-hj-Nuz">
+                                <rect key="frame" x="35" y="114" width="316" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FSx-dM-Taa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" priority="999" constant="42" id="7Fl-Z3-K6M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GSa-hj-Nuz" secondAttribute="trailing" constant="8" id="L5A-QQ-L8E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FSx-dM-Taa" secondAttribute="trailing" priority="999" constant="43" id="LPZ-bT-NQb"/>
+                            <constraint firstItem="FSx-dM-Taa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" priority="999" constant="215" id="auz-ou-CtV"/>
+                            <constraint firstItem="GSa-hj-Nuz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="dZT-8T-mul"/>
+                            <constraint firstItem="GSa-hj-Nuz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="19" id="rOd-Fu-XCB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="38u-vK-36v"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="olaCabImage" destination="FSx-dM-Taa" id="47d-9a-Hwa"/>
+                        <outletCollection property="contentViewConstraints" destination="7Fl-Z3-K6M" id="k0S-Sw-lyq"/>
+                        <outletCollection property="contentViewConstraints" destination="LPZ-bT-NQb" id="vYb-ZX-Mfm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7IB-yg-BI1">
+                    <connections>
+                        <action selector="handlePanGesture:" destination="vXZ-lx-hvc" id="UHf-As-nlV"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="2GD-RD-WjQ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1182.5" y="-591.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1N9-hh-N09">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNF-rx-2ud" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aLi-SC-dpg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="JLr-Zl-eEA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ck-mG-ij4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="-339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="olacab.png" width="258" height="110"/>
+    </resources>
 </document>

@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate>
+
+
+// Snap behavior responsible for the snap movement of the contentView after the
+// dragging gesture has ended.
+@property(nonatomic, strong) UISnapBehavior *snapBehavior;
+
+// Dynamic animator that will take care of animating the snap movement.
+@property(nonatomic, strong) UIDynamicAnimator *animator;
+
+@property (weak, nonatomic) IBOutlet UIImageView *olaCabImage;
+
+@property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *contentViewConstraints;
+
+- (IBAction)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer;
 
 
 @end
